@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <script>
+            var count=0;
+                function scheck()
+                {
+                    
+                
+                    var name=document.getElementById("sname").value;
+                    var sem=document.getElementById("sem").value;
+                    var code=document.getElementById("code").value;
+                
+                    var sub1=document.getElementById("sub1").value;
+                    var sub2=document.getElementById("sub2").value;
+                    var sub3=document.getElementById("sub3").value;
+                    var sub4=document.getElementById("sub4").value;
+                    var sub5=document.getElementById("sub5").value;
+                    var sub6=document.getElementById("sub6").value;
+                    
+                    var total1=document.getElementById("total1").value;
+                    var total2=document.getElementById("total2").value;
+                    var total3=document.getElementById("total3").value;
+                    var total4=document.getElementById("total4").value;
+                    var total5=document.getElementById("total5").value;
+                    var total6=document.getElementById("total6").value;
+                
+                    var mark1=document.getElementById("mark1").value;
+                    var mark2=document.getElementById("mark2").value;
+                    var mark3=document.getElementById("mark3").value;
+                   var mark4=document.getElementById("mark4").value;
+                    var mark5=document.getElementById("mark5").value;
+                    var mark6=document.getElementById("mark6").value;
+                
+                    document.getElementById("lname").innerHTML=name;
+                    document.getElementById("lcode").innerHTML=code;
+                    document.getElementById("lsem").innerHTML=sem;
+                
+                    document.getElementById("su1").innerHTML=sub1;
+                    document.getElementById("mar1").innerHTML=mark1;
+                    document.getElementById("to1").innerHTML=total1;
+                    document.getElementById("grade1").innerHTML=sgrade(mark1,total1);
+                
+                    document.getElementById("su2").innerHTML=sub2;
+                    document.getElementById("mar2").innerHTML=mark2;
+                    document.getElementById("to2").innerHTML=total2;
+                    document.getElementById("grade2").innerHTML=sgrade(mark2,total2);
+                
+                    document.getElementById("su3").innerHTML=sub3;
+                    document.getElementById("mar3").innerHTML=mark3;
+                    document.getElementById("to3").innerHTML=total3;
+                    document.getElementById("grade3").innerHTML=sgrade(mark3,total3);
+                
+                    document.getElementById("su4").innerHTML=sub4;
+                    document.getElementById("mar4").innerHTML=mark4;
+                    document.getElementById("to4").innerHTML=total4;
+                    document.getElementById("grade4").innerHTML=sgrade(mark4,total4);
+                
+                    document.getElementById("su5").innerHTML=sub5;
+                    document.getElementById("mar5").innerHTML=mark5;
+                    document.getElementById("to5").innerHTML=total5;
+                    document.getElementById("grade5").innerHTML=sgrade(mark5,total5);
+                
+                    document.getElementById("su6").innerHTML=sub6;
+                    document.getElementById("mar6").innerHTML=mark6;
+                    document.getElementById("to6").innerHTML=total6;
+                    document.getElementById("grade6").innerHTML=sgrade(mark6,total6);
+                    if(count==0)
+                    {
+                        document.getElementById("st").innerHTML="Passed";
+                    }
+                    else
+                    {
+                        document.getElementById("st").innerHTML="Failed";
+                    }
+                }
+                function sgrade(a,b)
+                {
+                    var g;
+                    var r=(a/b)*100;
+                    if(r>=95)
+                    {
+                       g="s";
+                    }
+                    else if(r>=90)
+                    {
+                        g="A+";
+                    }
+                    else if(r>=85)
+                    {
+                        g="A";
+                    }
+                    else if(r>=80)
+                    {
+                        g="B+";
+                    }
+                    else if(r>=75)
+                    {
+                        g="B";
+                    }
+                    else if(r>=70)
+                    {
+                        g="C+";
+                    }
+                    else if(r>=65)
+                    {
+                        g="C";
+                    }
+                    else if(r>=60)
+                    {
+                        g="D+";
+                    }
+                    else if(r>=55)
+                    {
+                        g="D";
+                    }
+                    else if(r>=50)
+                    {
+                        g="E";
+                    }
+                    else
+                    {
+                        g="F";
+                        count++;
+                    }
+                    return g;
+                }
+                </script>
+                
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <a href="./js/stud.js"></a>
+    <link href="./js/stud.js"/>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col col-12 col-sl-6 col-md-4 col-lg-3 col-xl-2">
+               <table>
+                   <tr>
+                       <td><label>Name :</label><input type="text" id="sname"/>
+                        <td></td>
+ 
+                   </tr>
+                   <tr>
+                       <td><label>Semester :</label><input type="text" id="sem"/></td>
+                       <td><label>Exam Code :</label><input type="text" id="code"/></td>
+                   </tr>
+               </table class="table">
+               <table>
+                   <tr>
+                       <td><label>Subject 1 Name :</label></td><td><input type="text" id="sub1"/></td>
+                       <td><label>Subject Mark Obtained :</label></td><td><input type="text" id="mark1"/></td>
+                       <td><label>Subject Total Mark</label></td><td><input type="text" id="total1"/></td>
+
+                   </tr>
+                   <tr>
+                    <td><label>Subject 2 Name :</label></td><td><input type="text" id="sub2"/></td>
+                    <td><label>Subject Mark Obtained :</label></td><td><input type="text" id="mark2"/></td>
+                    <td><label>Subject Total Mark</label></td><td><input type="text" id="total2"/></td>
+                    
+                </tr>
+                <tr>
+                    <td><label>Subject 3 Name :</label></td><td><input type="text" id="sub3"/></td>
+                    <td><label>Subject Mark Obtained :</label></td><td><input type="text" id="mark3"/></td>
+                    <td><label>Subject Total Mark</label></td><td><input type="text" id="total3"/></td>
+                    
+                </tr>
+                <tr>
+                    <td><label>Subject  4Name :</label></td><td><input type="text" id="sub4"/></td>
+                    <td><label>Subject Mark Obtained :</label></td><td><input type="text" id="mark4"/></td>
+                    <td><label>Subject Total Mark</label></td><td><input type="text" id="total4"/></td>
+                    
+                </tr>
+                <tr>
+                    <td><label>Subject 5 Name :</label></td><td><input type="text" id="sub5"/></td>
+                    <td><label>Subject Mark Obtained :</label></td><td><input type="text" id="mark5"/></td>
+                    <td><label>Subject Total Mark</label></td><td><input type="text" id="total5"/></td>
+                    
+                </tr>
+                <tr>
+                    <td><label>Subject 6 Name :</label></td><td><input type="text" id="sub6"/></td>
+                    <td><label>Subject Mark Obtained :</label></td><td><input type="text" id="mark6"/></td>
+                    <td><label>Subject Total Mark</label></td><td><input type="text" id="total6"/></td>
+                    
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="button" onclick="scheck()" class="btn btn-warning" value="Generate Mark List"/></td>
+                </tr>
+               </table>
+
+               <div style="border:3px solid black">
+                <table>
+                <tr>
+                    <td>Name :</td>
+                    <td><p id="lname"></p></td>
+                    <td>Semester :</td>
+                    <td><p id="lsem"></p></td>
+                    <td>Exam Code :</td>
+                    <td><p id="lcode"></p></td>
+                </tr>
+                </table>   
+                <table class="table">
+                    <tr>
+                        <th>Subject</th>
+                        <th>Mark Obtained</th>
+                        <th>Total Mark</th>
+                        <th>Grade</th>
+                    </tr>
+                    <tr>
+                        <td><p id="su1"></p></td>
+                        <td><p id="mar1"></p></td>
+                        <td><p id="to1"></p></td>
+                        <td><p id="grade1"></p></td>
+                    </tr>
+                    <tr>
+                            <td><p id="su2"></p></td>
+                            <td><p id="mar2"></p></td>
+                            <td><p id="to2"></p></td>
+                            <td><p id="grade2"></p></td>
+                        </tr>
+                        <tr>
+                                <td><p id="su3"></p></td>
+                                <td><p id="mar3"></p></td>
+                                <td><p id="to3"></p></td>
+                                <td><p id="grade3"></p></td>
+                            </tr>
+                            <tr>
+                                    <td><p id="su4"></p></td>
+                                    <td><p id="mar4"></p></td>
+                                    <td><p id="to4"></p></td>
+                                    <td><p id="grade4"></p></td>
+                                </tr>
+                                <tr>
+                                        <td><p id="su5"></p></td>
+                                        <td><p id="mar5"></p></td>
+                                        <td><p id="to5"></p></td>
+                                        <td><p id="grade5"></p></td>
+                                    </tr>
+                                    <tr>
+                                            <td><p id="su6"></p></td>
+                                            <td><p id="mar6"></p></td>
+                                            <td><p id="to6"></p></td>
+                                            <td><p id="grade6"></p></td>
+                                        </tr>
+                </table>
+                <label style="text-align:center">Status :</label><p id="st"></p> 
+               </div>
+
+            </div>
+        </div>
+    </div></td>
+</body>
+</html> 

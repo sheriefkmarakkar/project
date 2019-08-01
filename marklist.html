@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script>
             var count=0;
                 function scheck()
                 {
                     
-                
+                alert();
                     var name=document.getElementById("sname").value;
                     var sem=document.getElementById("sem").value;
                     var code=document.getElementById("code").value;
@@ -32,7 +33,17 @@
                     var mark5=document.getElementById("mark5").value;
                     var mark6=document.getElementById("mark6").value;
                 
-                    document.getElementById("lname").innerHTML=name;
+                    $(document).ready(function(){
+                        
+                            alert();
+                            if(name.length<1||sem.length<1||code.length<1||sub1.length<1||sub2.length<1||sub3.length<1||sub4.length<1||sub5.length<1||sub6.length<1||mark1.length<1||mark2.length<1||mark3.length<1||mark4.length<1||mark5.length<1||mark6.length<1||total1.length<1||total2.length<1||total3.length<1||total4.length<1||total5.length<1||total6.length<1)
+                        {
+                            alert("Please Check All Fields");
+                        }
+                        else
+                        {
+                            $("#div1").show();
+                            document.getElementById("lname").innerHTML=name;
                     document.getElementById("lcode").innerHTML=code;
                     document.getElementById("lsem").innerHTML=sem;
                 
@@ -73,6 +84,11 @@
                     {
                         document.getElementById("st").innerHTML="Failed";
                     }
+                        }
+                        })
+                        
+                    
+                    
                 }
                 function sgrade(a,b)
                 {
@@ -133,8 +149,7 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <a href="./js/stud.js"></a>
-    <link href="./js/stud.js"/>
+    
 </head>
 <body>
     
@@ -191,11 +206,11 @@
                 </tr>
                 <tr>
                     <td></td>
-                    <td><input type="button" onclick="scheck()" class="btn btn-warning" value="Generate Mark List"/></td>
+                    <td><input type="button" id="bid" onclick="scheck()" class="btn btn-warning" value="Generate Mark List"/></td>
                 </tr>
                </table>
 
-               <div style="border:3px solid black">
+               <div id="div1" style="border:3px solid black; display: none">
                 <table>
                 <tr>
                     <td>Name :</td>
